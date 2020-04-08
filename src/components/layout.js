@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 import logo from "../../content/assets/luya-logo.png";
+import luyaIcon from "../../content/assets/luya-icon.png";
 import headerImage from "../../content/assets/luya-header-min.png";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Parallax } from "react-scroll-parallax";
+import { Helmet } from "react-helmet";
+
 import cloud1 from "../../content/assets/ulap01.png";
 import cloud2 from "../../content/assets/ulap02.png";
 import cloud3 from "../../content/assets/ulap03.png";
@@ -85,6 +88,14 @@ const Layout = ({ location, title, children }) => {
           marginRight: `auto`
         }}
       >
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Luya Poetry</title>
+          <link rel="canonical" href="https://luyapoetry.com/" />
+          <meta property="og:title" content="Luya Poetry" />
+          <meta property="og:url" content="https://luyapoetry.com/" />
+          <meta property="og:image" content={luyaIcon} />
+        </Helmet>
         <header>{header}</header>
         <main>{children}</main>
         <footer>
