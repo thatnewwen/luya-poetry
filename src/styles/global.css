@@ -1,0 +1,210 @@
+body {
+  background-color: #612e6d;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+}
+
+.header-background {
+  position: absolute;
+  z-index: -10;
+}
+
+.header-container {
+  height: 150vh;
+}
+
+.first-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  padding: 30px;
+  justify-content: center;
+  background: #fc899a;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 200px;
+  border-radius: 3px;
+}
+
+.logo-container h2 {
+  margin: 10px;
+}
+
+.post-section {
+  text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.post-section p {
+  margin: 0px;
+  text-decoration: none;
+  color: black;
+}
+
+.logo-container h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-container p:last-child {
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
+.header-logo {
+  width: 300px;
+  position: absolute;
+  top: 50px;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  margin: 100px 0;
+  width: 100%;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 70%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  margin: auto;
+}
+
+.about {
+  margin: auto;
+  max-width: 800px;
+  font-size: 16px;
+  color: white;
+  padding: 0 40px;
+  position: relative;
+}
+
+footer {
+  position: relative;
+}
+
+.cloud {
+  position: absolute;
+  z-index: -10;
+}
+
+.cloud1 {
+  left: 100px;
+  bottom: 0px;
+  width: 300px;
+}
+.cloud2 {
+  left: -300px;
+  bottom: -800px;
+  width: 300px;
+}
+.cloud3 {
+  right: 0px;
+  bottom: -500px;
+  width: 300px;
+}
+.cloud4 {
+  right: 0px;
+  bottom: -900px;
+  width: 300px;
+}
+.cloud5 {
+  left: 100px;
+  bottom: -400px;
+  width: 300px;
+}
+.cloud6 {
+  left: 100px;
+  bottom: -500px;
+}
+.cloud7 {
+  left: 200px;
+  top: 0px;
+  width: 300px;
+}
+.cloud8 {
+  left: 200px;
+  top: -700px;
+  width: 250px;
+}
+.cloud9 {
+  right: 30px;
+  bottom: 100px;
+  width: 250px;
+}
+.cloud10 {
+  left: 400px;
+  bottom: 0;
+  width: 350px;
+}
+
+.about a {
+  color: palevioletred;
+}
+
+footer {
+  height: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+  }
+
+  .about {
+    text-align: justify;
+  }
+
+  .header-container {
+    height: 100vh;
+  }
+
+  footer {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .cloud4,
+  .cloud7,
+  .cloud8 {
+    display: none;
+  }
+}
