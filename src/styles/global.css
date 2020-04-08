@@ -1,6 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #612e6d;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1,
