@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import logo from "../../content/assets/luya-logo.png";
-import headerImage from "../../content/assets/luya-header.png";
+import headerImage from "../../content/assets/luya-header-min.png";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Parallax } from "react-scroll-parallax";
 import cloud1 from "../../content/assets/ulap01.png";
@@ -21,37 +21,39 @@ const Layout = ({ location, title, children }) => {
     header = (
       <div className="header-container">
         <img className="header-background" src={headerImage} />
-        <Parallax className="cloud cloud1" y={[-50, 50]} tagOuter="figure">
+        <Parallax className="cloud cloud1" y={[-100, 100]} tagOuter="figure">
           <img src={cloud1} />
         </Parallax>
-        <Parallax className="cloud cloud2" y={[-50, 50]} tagOuter="figure">
+        <Parallax className="cloud cloud2" y={[-100, 100]} tagOuter="figure">
           <img src={cloud2} />
         </Parallax>
-        <Parallax className="cloud cloud3" y={[-50, 50]} tagOuter="figure">
+        <Parallax className="cloud cloud3" y={[-100, 100]} tagOuter="figure">
           <img src={cloud3} />
         </Parallax>
-        <Parallax className="cloud cloud4" y={[-50, 50]} tagOuter="figure">
+        <Parallax className="cloud cloud4" y={[-100, 100]} tagOuter="figure">
           <img src={cloud4} />
         </Parallax>
         <div className="first-page">
           <img className="header-logo" src={logo} />
-          <div className="logo-container">
-            <h2>#20: See You Soon</h2>
-            <h3>Houseparty Edition</h3>
-            <p>
-              This month we meditate on the endpoints we are looking forward to,
-              the inherent uncertainty of our anticipation, and the surprises we
-              didn’t know we were hoping for.{" "}
-            </p>
-          </div>
-          <div className="post-section">
-            <a href="#houseparty">
-              <p>JOIN US</p>
-            </a>
-            <a href="#houseparty">
-              <p>⬇</p>
-            </a>
-          </div>
+          <Parallax y={[-50, 50]} tagOuter="figure">
+            <div className="logo-container">
+              <h2>#20: See You Soon</h2>
+              <h3>Houseparty Edition</h3>
+              <p>
+                This month we meditate on the endpoints we are looking forward
+                to, the inherent uncertainty of our anticipation, and the
+                surprises we didn’t know we were hoping for.{" "}
+              </p>
+            </div>
+            <div className="post-section">
+              <a href="#houseparty">
+                <p>JOIN US</p>
+              </a>
+              <a href="#houseparty">
+                <p>⬇</p>
+              </a>
+            </div>
+          </Parallax>
         </div>
       </div>
     );
@@ -86,16 +88,16 @@ const Layout = ({ location, title, children }) => {
         <header>{header}</header>
         <main>{children}</main>
         <footer>
-          <Parallax className="cloud cloud7" y={[-30, 30]} tagOuter="figure">
+          <Parallax className="cloud cloud7" y={[-50, 50]} tagOuter="figure">
             <img src={cloud7} />
           </Parallax>
-          <Parallax className="cloud cloud8" y={[-30, 30]} tagOuter="figure">
+          <Parallax className="cloud cloud8" y={[-100, 100]} tagOuter="figure">
             <img src={cloud8} />
           </Parallax>
-          <Parallax className="cloud cloud9" y={[-30, 30]} tagOuter="figure">
+          <Parallax className="cloud cloud9" y={[-100, 100]} tagOuter="figure">
             <img src={cloud9} />
           </Parallax>
-          <Parallax className="cloud cloud10" y={[-30, 30]} tagOuter="figure">
+          <Parallax className="cloud cloud10" y={[-100, 100]} tagOuter="figure">
             <img src={cloud10} />
           </Parallax>
         </footer>

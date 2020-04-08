@@ -154,22 +154,22 @@ footer {
 }
 .cloud7 {
   left: 200px;
-  top: 0px;
+  top: 50px;
   width: 300px;
 }
 .cloud8 {
   left: 200px;
-  top: -700px;
+  top: -800px;
   width: 250px;
 }
 .cloud9 {
-  right: 30px;
-  bottom: 100px;
+  right: 130px;
+  bottom: 0;
   width: 250px;
 }
 .cloud10 {
   left: 400px;
-  bottom: 0;
+  bottom: -200px;
   width: 350px;
 }
 
@@ -205,6 +205,16 @@ footer {
   footer {
     height: 300px;
     overflow: hidden;
+  }
+
+  .post-section,
+  .post-section a,
+  .post-section p {
+    color: white;
+  }
+
+  .cloud10 {
+    left: 200px;
   }
 
   .cloud4,
