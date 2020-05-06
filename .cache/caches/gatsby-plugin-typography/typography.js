@@ -1,1 +1,0 @@
-module.exports = require("/Users/alexwen/Projects/luya/src/utils/typography")

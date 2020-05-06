@@ -1,120 +1,164 @@
-import React from "react";
-import { Link } from "gatsby";
-import logo from "../../content/assets/luya-logo.png";
-import luyaIcon from "../../content/assets/luya-icon.png";
-import headerImage from "../../content/assets/luya-header-min.png";
-import { ParallaxProvider } from "react-scroll-parallax";
-import { Parallax } from "react-scroll-parallax";
-import { Helmet } from "react-helmet";
+import React from 'react'
+import { Link } from 'gatsby'
+import logo from '../../static/luya-logo.png'
+import '../styles/global.css'
+import styles from './navigation.module.css'
 
-import cloud1 from "../../content/assets/ulap01.png";
-import cloud2 from "../../content/assets/ulap02.png";
-import cloud3 from "../../content/assets/ulap03.png";
-import cloud4 from "../../content/assets/ulap04.png";
-import cloud7 from "../../content/assets/ulap07.png";
-import cloud8 from "../../content/assets/ulap08.png";
-import cloud9 from "../../content/assets/ulap09.png";
-import cloud10 from "../../content/assets/ulap10.png";
+import Container from './container'
+import Navigation from './navigation'
+import luyaIcon from '../../static/luya-icon.png'
+import headerImage from '../../static/luya-header-min.png'
+import { ParallaxProvider } from 'react-scroll-parallax'
+import { Parallax } from 'react-scroll-parallax'
+import { Helmet } from 'react-helmet'
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
-  let header;
+import downArrow from '../../static/down-arrow.png'
+import cloud1 from '../../static/ulap01.png'
+import cloud2 from '../../static/ulap02.png'
+import cloud3 from '../../static/ulap03.png'
+import cloud4 from '../../static/ulap04.png'
+import cloud7 from '../../static/ulap07.png'
+import cloud8 from '../../static/ulap08.png'
+import cloud9 from '../../static/ulap09.png'
+import cloud10 from '../../static/ulap10.png'
 
-  if (location.pathname === rootPath) {
-    header = (
-      <div className="header-container">
-        <img className="header-background" src={headerImage} />
-        <Parallax className="cloud cloud1" y={[-100, 100]} tagOuter="figure">
-          <img src={cloud1} />
-        </Parallax>
-        <Parallax className="cloud cloud2" y={[-100, 100]} tagOuter="figure">
-          <img src={cloud2} />
-        </Parallax>
-        <Parallax className="cloud cloud3" y={[-100, 100]} tagOuter="figure">
-          <img src={cloud3} />
-        </Parallax>
-        <Parallax className="cloud cloud4" y={[-100, 100]} tagOuter="figure">
-          <img src={cloud4} />
-        </Parallax>
-        <div className="first-page">
-          <img className="header-logo" src={logo} />
-          <Parallax y={[-50, 50]} tagOuter="figure">
-            <div className="logo-container">
-              <h2>#20: See You Soon</h2>
-              <h3>Houseparty Edition</h3>
-              <p>
-                This month we meditate on the endpoints we are looking forward
-                to, the inherent uncertainty of our anticipation, and the
-                surprises we didn’t know we were hoping for.{" "}
-              </p>
-            </div>
-            <div className="post-section">
-              <a href="#houseparty">
-                <p>JOIN US</p>
-              </a>
-              <a href="#houseparty">
-                <p>⬇</p>
-              </a>
-            </div>
+class Template extends React.Component {
+  render() {
+    const { location, children } = this.props
+    let header
+
+    let rootPath = `/`
+    if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
+      rootPath = __PATH_PREFIX__ + `/`
+    }
+
+    if (location.pathname === rootPath) {
+      header = (
+        <div className="header-container">
+          <img className="header-background" src={headerImage} />
+          <Parallax className="cloud cloud1" y={[-100, 100]} tagOuter="figure">
+            <img src={cloud1} />
           </Parallax>
+          <Parallax className="cloud cloud2" y={[-100, 100]} tagOuter="figure">
+            <img src={cloud2} />
+          </Parallax>
+          <Parallax className="cloud cloud3" y={[-100, 100]} tagOuter="figure">
+            <img src={cloud3} />
+          </Parallax>
+          <Parallax className="cloud cloud4" y={[-100, 100]} tagOuter="figure">
+            <img src={cloud4} />
+          </Parallax>
+          <Navigation />
+          <ul id="myLinks">
+          <li className={styles.navigationItem}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={styles.navigationItem}>
+            <Link to="/blog/">Blog</Link>
+          </li>
+        </ul>
+          <div className="first-page">
+            <img className="header-logo" src={logo} />
+            <Parallax y={[-50, 50]} tagOuter="figure">
+              <div className="logo-container">
+                <h2>#20: See You Soon</h2>
+                <h3>Houseparty Edition</h3>
+                <p>
+                  This month we meditate on the endpoints we are looking forward
+                  to, the inherent uncertainty of our anticipation, and the
+                  surprises we didn’t know we were hoping for.{' '}
+                </p>
+              </div>
+              <div className="post-section">
+                <a href="#houseparty">
+                  <p>JOIN US</p>
+                </a>
+                <a href="#houseparty">
+                  <img className="down-arrow" alt="⬇" src={downArrow} />
+                </a>
+              </div>
+            </Parallax>
+          </div>
         </div>
-      </div>
-    );
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0
-        }}
-      >
-        <Link
+      )
+    } else {
+      header = (
+        <div className="page-header">
+          <img src={logo} />
+          <h3
+            style={{
+              fontFamily: `Montserrat, sans-serif`,
+              marginTop: 0,
+            }}
+          ></h3>
+          <Navigation />
+          <ul id="myLinks">
+          <li className={styles.navigationItem}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={styles.navigationItem}>
+            <Link to="/blog/">Blog</Link>
+          </li>
+        </ul>
+        </div>
+      )
+    }
+    return (
+      <ParallaxProvider>
+        <div
           style={{
-            boxShadow: `none`,
-            color: `inherit`
+            marginLeft: `auto`,
+            marginRight: `auto`,
           }}
-          to={`/`}
         >
-          {title}
-        </Link>
-      </h3>
-    );
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Luya Poetry</title>
+            <link rel="canonical" href="https://luyapoetry.com/" />
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            />
+            <meta property="og:title" content="Luya Poetry" />
+            <meta property="og:url" content="https://luyapoetry.com/" />
+            <meta property="og:image" content={luyaIcon} />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale = 1.0, maximum-scale=1.0"
+            />
+          </Helmet>
+          <header>{header}</header>
+          <main>{children}</main>
+          <footer>
+            <Parallax className="cloud cloud7" y={[-50, 50]} tagOuter="figure">
+              <img src={cloud7} />
+            </Parallax>
+            <Parallax
+              className="cloud cloud8"
+              y={[-100, 100]}
+              tagOuter="figure"
+            >
+              <img src={cloud8} />
+            </Parallax>
+            <Parallax
+              className="cloud cloud9"
+              y={[-100, 100]}
+              tagOuter="figure"
+            >
+              <img src={cloud9} />
+            </Parallax>
+            <Parallax
+              className="cloud cloud10"
+              y={[-100, 100]}
+              tagOuter="figure"
+            >
+              <img src={cloud10} />
+            </Parallax>
+          </footer>
+        </div>
+      </ParallaxProvider>
+    )
   }
-  return (
-    <ParallaxProvider>
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`
-        }}
-      >
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Luya Poetry</title>
-          <link rel="canonical" href="https://luyapoetry.com/" />
-          <meta property="og:title" content="Luya Poetry" />
-          <meta property="og:url" content="https://luyapoetry.com/" />
-          <meta property="og:image" content={luyaIcon} />
-        </Helmet>
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          <Parallax className="cloud cloud7" y={[-50, 50]} tagOuter="figure">
-            <img src={cloud7} />
-          </Parallax>
-          <Parallax className="cloud cloud8" y={[-100, 100]} tagOuter="figure">
-            <img src={cloud8} />
-          </Parallax>
-          <Parallax className="cloud cloud9" y={[-100, 100]} tagOuter="figure">
-            <img src={cloud9} />
-          </Parallax>
-          <Parallax className="cloud cloud10" y={[-100, 100]} tagOuter="figure">
-            <img src={cloud10} />
-          </Parallax>
-        </footer>
-      </div>
-    </ParallaxProvider>
-  );
-};
+}
 
-export default Layout;
+export default Template

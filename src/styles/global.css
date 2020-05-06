@@ -2,10 +2,85 @@ html {
   scroll-behavior: smooth;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 body {
   background-color: #612e6d;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+  margin: 0;
+}
+
+/* Style the navigation menu */
+nav {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+#myLinks {
+  background: #612c6e;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+#myLinks a {
+  font-size: 40px;
+  padding: 40px;
+}
+
+/* Style navigation menu links */
+nav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+nav a.icon {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  font-size: 30px;
+  z-index: 200;
+}
+
+/* Add a grey background color on mouse-over */
+nav a:hover {
+  /* color: black; */
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.75rem;
 }
 
 h1,
@@ -14,12 +89,24 @@ h3,
 h4,
 p,
 span {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2,
 h3 {
   font-weight: 600;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.73rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: 1.75rem;
 }
 
 .header-background {
@@ -38,6 +125,12 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.down-arrow {
+  width: 30px;
+  text-decoration: none;
+  margin: 0;
 }
 
 .logo-container {
@@ -63,10 +156,16 @@ h3 {
   color: black;
 }
 
+.post-section a {
+  box-shadow: none;
+  text-decoration: none;
+}
+
 .post-section p {
   margin: 0px;
   text-decoration: none;
   color: black;
+  font-weight: 500;
 }
 
 .logo-container h3 {
@@ -112,6 +211,61 @@ h3 {
   color: white;
   padding: 0 40px;
   position: relative;
+}
+
+.header-container nav {
+  color: #612c6e;
+}
+nav {
+  position: absolute;
+  right: 0;
+  padding: 50px;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.article-list {
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.article-list h3 a {
+  color: black;
+}
+
+.article-preview {
+  padding: 20px;
+  background: #fcc8d6;
+  margin: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.page-header {
+  height: 250px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-header img {
+  width: 200px;
+  object-fit: contain;
+}
+
+.blog-container {
+  max-width: 800px;
+  background: #ffd5d5;
+  padding: 20px;
+  border-radius: 5px;
+  margin: auto;
 }
 
 footer {
@@ -182,6 +336,18 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .header-logo {
+    width: 175px;
+  }
+
+  #desktopLinks {
+    display: none;
+  }
+
+  nav a.icon {
+    display: block;
+  }
+
   .iframe-container iframe {
     border: 0;
     height: 100%;
