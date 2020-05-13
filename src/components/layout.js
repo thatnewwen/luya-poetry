@@ -50,23 +50,27 @@ class Template extends React.Component {
           </Parallax>
           <Navigation />
           <ul id="myLinks">
-          <li className={styles.navigationItem}>
-            <Link to="/">Home</Link>
-          </li>
-          <li className={styles.navigationItem}>
-            <Link to="/blog/">Blog</Link>
-          </li>
-        </ul>
+            <li className={styles.navigationItem}>
+              <Link to="/">Home</Link>
+            </li>
+            <li className={styles.navigationItem}>
+              <Link to="/blog/">Blog</Link>
+            </li>
+          </ul>
           <div className="first-page">
             <img className="header-logo" src={logo} />
             <Parallax y={[-50, 50]} tagOuter="figure">
               <div className="logo-container">
-                <h2>#20: See You Soon</h2>
+                <h2>#21: Land</h2>
                 <h3>Houseparty Edition</h3>
                 <p>
-                  This month we meditate on the endpoints we are looking forward
-                  to, the inherent uncertainty of our anticipation, and the
-                  surprises we didn’t know we were hoping for.{' '}
+                  What is your connection to the land? What do we take from it,
+                  and what do we give back to nourish it? Centuries of violence
+                  have severed many of our connections to land, displacing
+                  indigenous people from ancestral lands, and forcing people to
+                  leave and find homes in new lands. When land can be stolen,
+                  divided, bought and sold on a whim, what becomes of its
+                  people?{' '}
                 </p>
               </div>
               <div className="post-section">
@@ -93,13 +97,13 @@ class Template extends React.Component {
           ></h3>
           <Navigation />
           <ul id="myLinks">
-          <li className={styles.navigationItem}>
-            <Link to="/">Home</Link>
-          </li>
-          <li className={styles.navigationItem}>
-            <Link to="/blog/">Blog</Link>
-          </li>
-        </ul>
+            <li className={styles.navigationItem}>
+              <Link to="/">Home</Link>
+            </li>
+            <li className={styles.navigationItem}>
+              <Link to="/blog/">Blog</Link>
+            </li>
+          </ul>
         </div>
       )
     }
