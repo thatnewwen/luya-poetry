@@ -16,8 +16,12 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
         <div id="houseparty" class="iframe-container">
           <iframe
-            src="https://player.twitch.tv/?channel=luyapoetry"
-            allowfullscreen="true"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/w0DpOGwhlvc"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
           ></iframe>
         </div>
         <div class="about">

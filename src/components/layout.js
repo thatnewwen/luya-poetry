@@ -21,6 +21,7 @@ import cloud7 from '../../static/ulap07.png'
 import cloud8 from '../../static/ulap08.png'
 import cloud9 from '../../static/ulap09.png'
 import cloud10 from '../../static/ulap10.png'
+import luya24 from '../../static/luya24.jpg'
 
 class Template extends React.Component {
   render() {
@@ -48,7 +49,7 @@ class Template extends React.Component {
           <Parallax className="cloud cloud4" y={[-100, 100]} tagOuter="figure">
             <img src={cloud4} />
           </Parallax>
-          <Navigation />
+          {/* <Navigation />
           <ul id="myLinks">
             <li className={styles.navigationItem}>
               <Link to="/">Home</Link>
@@ -56,22 +57,15 @@ class Template extends React.Component {
             <li className={styles.navigationItem}>
               <Link to="/blog/">Blog</Link>
             </li>
-          </ul>
+          </ul> */}
           <div className="first-page">
             <img className="header-logo" src={logo} />
             <Parallax y={[-50, 50]} tagOuter="figure">
               <div className="logo-container">
-                <h2>#21: Land</h2>
-                <h3>Houseparty Edition</h3>
-                <p>
-                  What is your connection to the land? What do we take from it,
-                  and what do we give back to nourish it? Centuries of violence
-                  have severed many of our connections to land, displacing
-                  indigenous people from ancestral lands, and forcing people to
-                  leave and find homes in new lands. When land can be stolen,
-                  divided, bought and sold on a whim, what becomes of its
-                  people?{' '}
-                </p>
+                <img
+                  alt="Flyer for Luya 24: Yearning, showing a picture of a cat meme inside a web browser"
+                  src={luya24}
+                />
               </div>
               <div className="post-section">
                 <a href="#houseparty">
@@ -95,15 +89,15 @@ class Template extends React.Component {
               marginTop: 0,
             }}
           ></h3>
-          <Navigation />
-          <ul id="myLinks">
+          {/* <Navigation /> */}
+          {/* <ul id="myLinks">
             <li className={styles.navigationItem}>
               <Link to="/">Home</Link>
             </li>
             <li className={styles.navigationItem}>
               <Link to="/blog/">Blog</Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
       )
     }
